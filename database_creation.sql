@@ -31,6 +31,7 @@ CREATE TABLE impacto_ia_empleos (
     Skill_10 DECIMAL(3, 2)
 );
 
+DROP TABLE IF EXISTS impacto_ia_empleos;
 
 INSERT INTO sql_project.impacto_ia_empleos
 (Job_Title, Education_Level, Risk_Category, Average_Salary, Years_Experience, AI_Exposure_Index, Tech_Growth_Factor, Automation_Probability_2030, Skill_1, Skill_2, Skill_3, Skill_4, Skill_5, Skill_6, Skill_7, Skill_8, Skill_9, Skill_10)
@@ -3036,8 +3037,6 @@ VALUES
 	('Graphic Designer', 'PhD', 'Medium', 110296, 7, 0.95, 1.23, 0.46, 0.21, 0.18, 0.14, 0.22, 0.55, 0.68, 0.31, 0.55, 0.34, 0.7),
 	('Graphic Designer', 'PhD', 'Medium', 123909, 25, 0.69, 0.56, 0.49, 0.77, 0.54, 0.95, 0.05, 0.29, 0.22, 0.77, 0.52, 0.14, 0.29);
 
-TRUNCATE TABLE esco_occupations;
-
 CREATE TABLE esco_occupation (
     conceptType VARCHAR(50),
     conceptUri VARCHAR(255),
@@ -3055,7 +3054,6 @@ CREATE TABLE esco_occupation (
     code VARCHAR(50)
 );
 
-TRUNCATE TABLE esco_occupation;
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 9.5/Uploads/occupations_en.csv'
 INTO TABLE esco_occupation
 FIELDS TERMINATED BY ','
@@ -3063,5 +3061,6 @@ ENCLOSED BY '\"'
 LINES TERMINATED BY '\r\n'  
 IGNORE 1 ROWS;
 
-SELECT COUNT(*) FROM esco_occupation;
+SELECT * FROM esco_occupation;
 
+SELECT * FROM impacto_ia_empleos;
