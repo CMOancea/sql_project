@@ -3065,3 +3065,6 @@ IGNORE 1 ROWS;
 
 SELECT COUNT(*) FROM esco_occupation;
 
+SELECT COUNT(*) FROM impacto_ia_empleos
+
+
